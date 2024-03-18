@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         logLifeCycle("onCreate")
         binding.btnClick.setOnClickListener {
             val intent = Intent(this,SecondActivity::class.java).apply {
-                putExtra("Message","This data from MainActivity")
+                putExtra("Message","Đây là dữ liệu mới")
             }
             resultLauncher.launch(intent)
         }
@@ -67,4 +67,5 @@ class MainActivity : AppCompatActivity() {
     private fun logLifeCycle(msg: String){
         Log.d("MainActivity",msg)
     }
+
 }
